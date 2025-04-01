@@ -5,7 +5,7 @@ date: "2025-04-01"
 layout: ../../layouts/PostLayout.astro
 description: "Detail walkthrough on tryhackme machine corridor."
 
-img_path : "/images/corridor.png"
+img_path : "/images/corridor/corridor.png"
 img_alt: "web image"
 ---
 # Try Hack Me Room: Corridor
