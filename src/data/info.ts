@@ -1,19 +1,19 @@
 export const info = {
   name: "Tshering Phuntsho",
   brief_description:
-    "I'm a mischievous full stack developer with a knack for troublemaking.",
-  role: "Full Stack Developer",
+    "I'm currently pursuing Bachelor degree in B.E in Software Engineering at College of Science and Technology(CST).",
+  role: "Software Engineer",
   picture: "/pic.png",
-  picture_alt: "Bart Simpson",
-  location: "Springfield, USA",
+  picture_alt: "My Picture",
+  location: "Phuntsholing, Bhutan",
   cv: "/resume.pdf",
 
   about: {
-    description: `I'm a full stack developer with a passion for causing a little chaos in web development.
-    I have a solid foundation in computer science, although I prefer skateboarding over studying.
-    I excel in building web applications using React, Node.js, and MongoDB.
-    I'm known for my sharp wit and quick thinking, traits that serve me well in coding and pranks alike.
-    Looking for a challenge? Let's create something memorable together.`,
+    description: `I am software engineer with a strong background in full-stack development, cyber security, AI, and computer vision. 
+    I have worked on projects like a parking space detection system, autonomous vehicle software, and a mobile app similar to Gojek using Expo. 
+    I have skilled in React, Next.js, TypeScript, Python, OpenCV, PostgreSQL, and Prisma.  
+    Beyond coding, I am passionate about football. 
+    I am also planning to build an app that will benefit the people of Bhutan.`,
     education: [
       {
         title: "Self-Taught Developer Extraordinaire",
@@ -84,9 +84,9 @@ export const info = {
   ],
 
   contact: {
-    email: "bart@thesimpsons.com",
-    linkedin: "https://www.linkedin.com/in/bartsimpsonfake",
-    github: "https://www.github.com/gio-del",
+    email: "02230310.cst@rub.edu.bt",
+    linkedin: "https://www.linkedin.com/in/tshering-phuntsho-371231291/",
+    github: "https://github.com/tsheringphuntsho18",
     twitter: "https://www.twitter.com/bartsimpsonfake",
   },
 };
