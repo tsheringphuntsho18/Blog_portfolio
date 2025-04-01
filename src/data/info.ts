@@ -3,7 +3,7 @@ export const info = {
   brief_description:
     "I'm currently pursuing Bachelor degree in B.E in Software Engineering at College of Science and Technology(CST).",
   role: "Software Engineer",
-  picture: "/pic.png",
+  picture: "/pic.jpg",
   picture_alt: "My Picture",
   location: "Phuntsholing, Bhutan",
   cv: "/resume.pdf",
