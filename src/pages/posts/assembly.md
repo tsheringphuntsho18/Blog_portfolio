@@ -5,7 +5,7 @@ date: "2025-04-01"
 layout: ../../layouts/PostLayout.astro
 description: "Assembly language is the second-lowest level of programming, just one step above machine code (binary)."
 
-img_path : "/images/assembly/theme.png"
+img_path : "/images/assembly/theme.jpg"
 img_alt: "theme picture"
 ---
 
