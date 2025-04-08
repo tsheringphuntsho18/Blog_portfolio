@@ -3,7 +3,7 @@ title: "THM Wgel CTF Walkthrough"
 date: "2025-04-08"
 
 layout: ../../layouts/PostLayout.astro
-description: "Detail walkthrough on tryhackme machine Wgel CTF
+description: "Detail walkthrough on tryhackme machine Wgel CTF"
 
 img_path : "/images/wgel/ww.png"
 img_alt: "insert image discription"
