@@ -8,6 +8,7 @@ description: "Detail walkthrough on tryhackme machine corridor."
 img_path : "/images/corridor/theme.jpg"
 img_alt: "web image"
 ---
+
 # Try Hack Me Room: Corridor
 Can you escape the Corridor?
 
