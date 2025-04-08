@@ -1,6 +1,6 @@
 ---
 title: "Notes on Assembly Language"
-date: "2025-04-01"
+date: "2025-04-08"
 
 layout: ../../layouts/PostLayout.astro
 description: "Assembly language is the second-lowest level of programming, just one step above machine code (binary)."

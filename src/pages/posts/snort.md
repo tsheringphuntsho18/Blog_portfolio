@@ -1,6 +1,6 @@
 ---
 title: "THM Snort Walkthrough"
-date: "2025-04-01"
+date: "2025-04-08"
 
 layout: ../../layouts/PostLayout.astro
 description: "Detail walkthrough on tryhackme machine snort."
