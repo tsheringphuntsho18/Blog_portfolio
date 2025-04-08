@@ -37,11 +37,11 @@ __Task 4__: Broken Access Control(IDOR challenge)
 
 I paste the machine ip address in the browser and I was given the login form as shown below.
 
-![owasp](/pictures/SWS_pictures/thmlogin.png)
+![owasp](/images/owasp/thmlogin.png)
  
 It was already given in the instruction that username is noot and password is test1234. So I just entered this username and password.
 
-![owasp](/pictures/SWS_pictures/thmgiven.png)
+![owasp](/images/owasp/thmgiven.png)
 
 I was successfully logged in but I didn't get the flag and then I viewed the hint and it said “The URL contains ?note_id=1 - I wonder what happens if you change the parameter value? You might be able to access another user's notes.” Then I changed that number to 2 3 4 and so on until I got the flag. The flag was in ?note_id=0.
 
@@ -50,7 +50,7 @@ __Ans__: flag{fivefourthree}.
 ### Cryptographic failures
 A cryptographic failure refers to any vulnerability arising from the misuse of cryptographic algorithms for protecting sensitive information. 
 
-![owasp](/pictures/SWS_pictures/crypto.png)
+![owasp](/images/owasp/crypto.png)
 
 Let's take an example.There was a couple Wangpo and Yuden. One day Wangpo asked Yuden for a facebook account. Yuden, who is concerned about security, sends her phone number and password in the special code(it is like a secret key) which Wangpo understands. Cryptographic failure is when that special code gets broken. And there comes the man in the middle attack who takes advantage of the cryptographic failure. 
 
@@ -62,13 +62,13 @@ To do this challenge I have to connect to the web application (http://machine_ip
 
 After seeing the question I was blank but I got the hint “Have a look at the source code on the /login page.” Then I clicked on the login and inspected the source code. The developer has left themselves a note in a comment, indicating that there is sensitive data in a specific directory.
 
-![owasp](/pictures/SWS_pictures/assest.png)
+![owasp](/images/owasp/assest.png)
 
 __Ans__: /pictures
 
 **Navigate to the directory you found in question one. What file stands out as being likely to contain sensitive data?**
 
-![owasp](/pictures/SWS_pictures/webappdb.png)
+![owasp](/images/owasp/webappdb.png)
 
 __Ans__: webapp.db
 
@@ -76,7 +76,7 @@ __Ans__: webapp.db
 
 To open the webapp.db file we need sqlite3.
 
-![owasp](/pictures/SWS_pictures/sqlite3.png)
+![owasp](/images/owasp/sqlite3.png)
 
 With little knowledge on sql i could get the password hash for user admin.
 
@@ -86,7 +86,7 @@ __Ans__:6eea9b7ef19179a06954edd0f6c05ceb
 
 Crackstation website is extremely good for cracking weak password hashes. So I used the crackstation website to crack password hash for admin.
 
-![owasp](/pictures/SWS_pictures/crackstation.png)
+![owasp](/images/owasp/crackstation.png)
 
 __Ans__: qwertyuiop
 
@@ -108,7 +108,7 @@ I will take advantage of a bash feature called "inline commands". To execute inl
 
 To list the file in that directory we use the ‘ls’ command. When exploiting command injection, we should give commands in $(ls) format.
 
-![owasp](/pictures/SWS_pictures/cowsay1.png)
+![owasp](/images/owasp/cowsay1.png)
 
 __Ans__: drpepper.txt
 
@@ -116,7 +116,7 @@ __Ans__: drpepper.txt
 
 I use the command $(cat /etc/passwd) to list the users.
 
-![owasp](/pictures/SWS_pictures/no_non_root.png)
+![owasp](/images/owasp/no_non_root.png)
 
 There are no non-root/non-service/non-daemon users.
 
@@ -126,7 +126,7 @@ __Ans__: 0
 
 With the ‘whoami’ command I can get the user who is in that app. 
 
-![owasp](/pictures/SWS_pictures/apache.png)
+![owasp](/images/owasp/apache.png)
 
 __Ans__: apache
 
@@ -134,7 +134,7 @@ __Ans__: apache
 
 I  scrolled down to the bottom and found the user’s [apache] shell [/sbin/nologin].
 
-![owasp](/pictures/SWS_pictures/sbin.png)
+![owasp](/images/owasp/sbin.png)
 
 __Ans__: /sbin/nologin
 
@@ -143,7 +143,7 @@ __Ans__: /sbin/nologin
 Hint: The version can be found in "/etc/alpine-release".
 So I ran the command “$(cat /etc/alpine-release)”.
 
-![owasp](/pictures/SWS_pictures/version.png)
+![owasp](/images/owasp/version.png)
 
 __Ans__: 3.16.0
 
@@ -153,25 +153,25 @@ It's like building a house without considering fire escapes or a strong foundati
 Try to reset joseph's password. Keep in mind the method used by the site to validate if you are indeed joseph.
 I don't know the password of Joseph so I am going to click on i forgot password.
 
-![owasp](/pictures/SWS_pictures/josep.png)
+![owasp](/images/owasp/josep.png)
 
 When I clicked on forget, I was asked to answer the following question.
 
-![owasp](/pictures/SWS_pictures/joseph1.png)
+![owasp](/images/owasp/joseph1.png)
 
 Luckily the username is joseph.
 
-![owasp](/pictures/SWS_pictures/joseph2.png)
+![owasp](/images/owasp/joseph2.png)
 
 From the security question, “what’s your favorite color?” is the only question that i can solve with brute force. Finally I guess correctly, it is green. By the way, it is case-sensitive.
 
-![owasp](/pictures/SWS_pictures/joseph3.png)
+![owasp](/images/owasp/joseph3.png)
 
 So the new temporary password has been generated. With that password I can login now.
 
 **What is the value of the flag in joseph's account?**
 
-![owasp](/pictures/SWS_pictures/joseph4.png)
+![owasp](/images/owasp/joseph4.png)
 
 There are three folders and the flag is in a private folder.
 
@@ -186,7 +186,7 @@ Werkzeug is a vital component in Python-based web applications as it provides an
 In the werkzeug console, I pasted the following python code to execute the ls -l command on the server.
 import os; print(os.popen("ls -l").read())
 
-![owasp](/pictures/SWS_pictures/werk.png)
+![owasp](/images/owasp/werk.png)
 
 __Ans__: todo.db
 
@@ -196,7 +196,7 @@ Here I just need to modify this code to read the content of app.py.
 import os; print(os.popen("ls -l").read())
 To display the content of a file the command is “cat” so the modified code is, <br> <ins>import os; print(os.popen("cat app.py").read()).
 
-![owasp](/pictures/SWS_pictures/werk2.png)
+![owasp](/images/owasp/werk2.png)
 
 __Ans__: THM{Just_a_tiny_misconfiguration}
 
@@ -210,18 +210,18 @@ Hint: You know it's a bookstore application. You should check for recent unauthe
 
 On the Exploit-DB site, I searched for the keyword ‘online book store’ and I filtered it by showing only verified ones.
 
-![owasp](/pictures/SWS_pictures/expbypass.png)
+![owasp](/images/owasp/expbypass.png)
 
 There are lots of unverified EDB. Downloads the verified one which is for online bookstores.
 
-![owasp](/pictures/SWS_pictures/expDb.png)
+![owasp](/images/owasp/expDb.png)
 
 To exploit I ran this command on the terminal <br>
 <ins> Python3 47887.py http://machine_ip:84/  <br>
 
 47887.py is the exploit file.
 
-![owasp](/pictures/SWS_pictures/expflag.png)
+![owasp](/images/owasp/expflag.png)
 
 __Ans__:  THM{But_1ts_n0t_my_f4ult!}
 
@@ -234,15 +234,15 @@ I have opened the given link http://10.10.158.236:8088.
 Instruction  <br>
 Try to register with darren as your username. You'll see that the user already exists, so try to register " darren" instead.
 
-![owasp](/pictures/SWS_pictures/darren.png)
+![owasp](/images/owasp/darren.png)
 
 darren username already exists so as instructed I will register darren with space at the beginning.
 
-![owasp](/pictures/SWS_pictures/darren1.png)
+![owasp](/images/owasp/darren1.png)
 
 In this way I can register darren. Now I can login as darren with the password I set up during registration.
 
-![owasp](/pictures/SWS_pictures/darren2.png)
+![owasp](/images/owasp/darren2.png)
 
 **What is the flag that you found in darren's account?**
 
@@ -251,7 +251,7 @@ __Ans__: fe86079416a21a3c99937fea8874b667
 **What is the flag that you found in arthur's account?**
 To get the flag from arthur’s account it is the same as how I did in darren.
 
-![owasp](/pictures/SWS_pictures/arhtur.png)
+![owasp](/images/owasp/arhtur.png)
 
 __Ans__: d9ac0f7db4fda460ac3edeb75d75e16e
 
@@ -264,24 +264,24 @@ __Task 19__<br>
 **What is the SHA-256 hash of https://code.jquery.com/jquery-1.12.4.min.js?**<br>
 There are many online tools to generate hashes one of it is SRI hash generator.
 
-![owasp](/pictures/SWS_pictures/hash.png)
+![owasp](/images/owasp/hash.png)
 
 __Ans__: sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=
 
 ***Data Integrity Failures***<br>
 The structure of a JWT token is formed of 3 parts:
 
-![owasp](/pictures/SWS_pictures/jwt.png)
+![owasp](/images/owasp/jwt.png)
 
 __Task 20__<br>
 Try logging into the application as guest. What is guest's account password?
 Hint: Try logging in with the wrong credentials.
 
-![owasp](/pictures/SWS_pictures/cookies.png)
+![owasp](/images/owasp/cookies.png)
 
 Now I know that both username and password is guest.
 
-![owasp](/pictures/SWS_pictures/cookielogin.png)
+![owasp](/images/owasp/cookielogin.png)
 
 I have successfully logged in as a guest but only the admin can access the flag.
 
@@ -290,7 +290,7 @@ __Ans__: guest
 **What is the name of the website's cookie containing a JWT token?**<br>
 Now I have successfully logged in, I might have JWT stored as a cookie in your browser. So I click on inspect to open developer tools. 
 
-![owasp](/pictures/SWS_pictures/Jwttoken.png)
+![owasp](/images/owasp/Jwttoken.png)
 
 In the storage tab there are cookies and all the details are there.
 
@@ -299,15 +299,15 @@ __Ans__: jwt-session
 **Use the knowledge gained in this task to modify the JWT token so that the application thinks you are the user "admin".** <br>
 Copy the value from the value column and decode the header and payload separately.
 
-![owasp](/pictures/SWS_pictures/decode1.png)
+![owasp](/images/owasp/decode1.png)
 
-![owasp](/pictures/SWS_pictures/decode2.png)
+![owasp](/images/owasp/decode2.png)
 
 Copy the output string and encode it by changing the ‘HS256’ to ‘none’ and username ‘guest’ to ‘admin’ separately. 
 
-![owasp](/pictures/SWS_pictures/encode1.png)
+![owasp](/images/owasp/encode1.png)
 
-![owasp](/pictures/SWS_pictures/encode2.png)
+![owasp](/images/owasp/encode2.png)
 
 Then copy paste that output Base64 of both header and payload together back into the value column in cookies and then refresh the browser.<br>
 Don't forget to put full stop at the end of our output base64.
@@ -323,7 +323,7 @@ __Ans__: THM{Dont_take_cookies_from_strangers}
 __Task 21__<br>
 **What IP address is the attacker using?**
 
-![owasp](/pictures/SWS_pictures/dwtask.png)
+![owasp](/images/owasp/dwtask.png)
 
 Inside the download task file I could see that 49.99.13.16 has tried to login many times but failed. That could be the ip address of an attacker.
 
@@ -344,22 +344,22 @@ Head to the given site(http://10.10.158.236:8087/), where you'll find a simple w
 
 **Explore the website. What is the only host allowed to access the admin area?**<br>
 
-![owasp](/pictures/SWS_pictures/website.png)
+![owasp](/images/owasp/website.png)
 
 I clicked on the three bars at the upper right corner.
 
-![owasp](/pictures/SWS_pictures/adminarea.png)
+![owasp](/images/owasp/adminarea.png)
 
 There I found the admin area section and when I clicked on it, it says ‘Admin interface only available from localhost’.
 
-![owasp](/pictures/SWS_pictures/localhost.png)
+![owasp](/images/owasp/localhost.png)
 
 __Ans__: localhost
 
 **Check the "Download Resume" button. Where does the server parameter point to?**
 When I hover on the Downloads Resume button the server parameter points to secure-file-storage.com .
 
-![owasp](/pictures/SWS_pictures/severpoint.png)
+![owasp](/images/owasp/severpoint.png)
 
 __Ans__: secure-file-storage.com
 
