@@ -6,7 +6,7 @@ layout: ../../layouts/PostLayout.astro
 description: "Detail walkthrough on tryhackme machine simple ctf."
 
 img_path : "/images/simplectf/theme.png"
-img_alt: "web image"
+img_alt: "theme picture"
 ---
 
 # Try Hack Me Room: Simple CTF
