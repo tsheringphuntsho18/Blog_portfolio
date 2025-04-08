@@ -5,7 +5,7 @@ date: "2025-04-08"
 layout: ../../layouts/PostLayout.astro
 description: "This walkthrough cover the tier0 and tier1 machines."
 
-img_path : "/images/startingpoint/theme.png"
+img_path : "/images/startingpoint/theme.jpeg"
 img_alt: "theme picture"
 ---
 
