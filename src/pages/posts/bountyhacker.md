@@ -5,7 +5,7 @@ date: "2025-04-01"
 layout: ../../layouts/PostLayout.astro
 description: "Detail walkthrough on tryhackme machine bounty hacker."
 
-img_path : "/images/Bountyhacker/theme.png"
+img_path : "/images/Bountyhacker/theme.jpeg"
 img_alt: "web image"
 ---
 
