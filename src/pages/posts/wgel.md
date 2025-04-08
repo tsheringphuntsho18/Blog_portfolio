@@ -6,7 +6,7 @@ layout: ../../layouts/PostLayout.astro
 description: "Detail walkthrough on tryhackme machine Wgel CTF
 
 img_path : "/images/wgel/ww.png"
-img_alt: "web image"
+img_alt: "insert image discription"
 ---
 
 # Try Hack Me Room: Wgel CTF
