@@ -9,8 +9,6 @@ img_path : "/images/linux/theme.png"
 img_alt: "theme picture"
 ---
 
-# 0. Linux
-
 ## Linux Structure
 
 - Linux is an operating system used for personal computers, servers, and even mobile devices.
