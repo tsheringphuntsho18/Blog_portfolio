@@ -68,8 +68,8 @@ There are a total of 6 different states for a scanned port we can obtain:
 | **closed** | The TCP protocol indicates that the received packet contains an RST flag. This can also help determine if the target is alive. |
 | **filtered** | Nmap cannot determine if the port is open or closed because either no response is returned or an error code is received. |
 | **unfiltered** | Occurs during a TCP-ACK scan; the port is accessible, but its open/closed state cannot be determined. |
-| **open|filtered** | If no response is received for a port, Nmap sets it to this state. It may be protected by a firewall or packet filter. |
-| **closed|filtered** | Occurs only in IP ID idle scans; it is impossible to determine whether the port is closed or filtered by a firewall. |
+| **openfiltered** | If no response is received for a port, Nmap sets it to this state. It may be protected by a firewall or packet filter. |
+| **closedfiltered** | Occurs only in IP ID idle scans; it is impossible to determine whether the port is closed or filtered by a firewall. |
 
 By default, Nmap scans the top 1000 TCP ports with the SYN scan (-sS).
 
