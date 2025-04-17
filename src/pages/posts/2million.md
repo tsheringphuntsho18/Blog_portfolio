@@ -5,11 +5,9 @@ date: "2025-04-16"
 layout: ../../layouts/PostLayout.astro
 description: "Detail walkthrough on hackthebox machine twomillion."
 
-img_path : "/images/2milion/theme.jpeg"
+img_path : "/images/2milion/logo.png"
 img_alt: "web image"
 ---
-
-![CTF](/images/2milion/logo.png)
 
 ## Title: TwoMillion
 
