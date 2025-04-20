@@ -70,6 +70,6 @@ I need to set rhost and lhost. When I kept the host as default, it didn’t work
 
 ## 3. Reference list
 
-[Lame.pdf](attachment:72a80f02-12bf-44e7-b512-d7bcfd93fedd:Lame.pdf)
+[Lame.pdf](/images/lame/Lame.pdf)
 
 [HackTheBox (HTB) — Lame](https://medium.com/@sshekhar01/hackthebox-htb-lame-94cba9bf304f)
