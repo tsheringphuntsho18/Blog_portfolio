@@ -81,4 +81,4 @@ root flag from C:\Documents and Settings\Administrator\Desktop\root.txt
 
 ## 3. Reference List
 
-![legacy.pdf](/images/legacy/Legacy.pdf)
+[legacy.pdf](/images/legacy/Legacy.pdf)
