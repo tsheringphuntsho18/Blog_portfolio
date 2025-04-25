@@ -35,7 +35,7 @@ By adding -sC flag I get more details about that machine.
 
 There are 5 ports open, and the FTP port allows anonymous login. So let’s try FTP login.
 
-![image.png](/images/netmon/ftp3.pngg)
+![image.png](/images/netmon/ftp3.png)
 
 With an anonymous username and random password, I could login into the FTP server.
 
