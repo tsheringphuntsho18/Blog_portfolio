@@ -1,6 +1,6 @@
 ---
 title: "HTB Jeeves Walkthrough"
-date: "2025-04-22"
+date: "2025-04-23"
 
 layout: ../../layouts/PostLayout.astro
 description: "Detail walkthrough on hackthebox machine jeeves."
